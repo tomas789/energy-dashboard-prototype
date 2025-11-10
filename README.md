@@ -129,3 +129,25 @@ Vitest drives the unit tests:
 - Introduce authentication/household selection if needed.
 - Add alert configuration UI and export/download actions.
 - Optimise chart chunking or lazy-load sections if bundle size becomes a concern.
+
+---
+
+## GitHub Pages deployment
+
+A GitHub Actions workflow (`.github/workflows/deploy.yml`) is bundled to publish the site to GitHub Pages.
+
+### One-time repo setup
+
+1. Push this project to GitHub with a default branch named `main`.
+2. In your repository, open **Settings → Pages**.
+3. Under **Build and deployment → Source**, choose **GitHub Actions**. (No further configuration is required.)
+
+### Publish
+
+1. Commit and push changes to `main`. The `Deploy to GitHub Pages` workflow will:
+   - Install dependencies.
+   - Build the Vite site (which already uses `base: './'` for relative asset paths).
+   - Upload the `dist` artefact and deploy it to Pages.
+2. Inspect the workflow run under **Actions → Deploy to GitHub Pages**. Once it completes, the summary shows the live URL (also visible in **Settings → Pages**).
+
+To trigger a manual redeploy, run the workflow via **Actions → Deploy to GitHub Pages → Run workflow**.
