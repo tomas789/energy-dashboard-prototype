@@ -1,0 +1,97 @@
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  padding: clamp(1rem, 2vw, 1.5rem);
+  border-radius: var(--radius-lg);
+  background: rgba(9, 15, 24, 0.72);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: var(--shadow-soft);
+}
+
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.header h2 {
+  margin: 0;
+  font-size: clamp(1.1rem, 2vw, 1.4rem);
+}
+
+.subtitle {
+  margin: 0.35rem 0 0;
+  font-size: 0.85rem;
+  color: var(--color-text-soft);
+}
+
+.metricToggle {
+  display: inline-flex;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(18, 28, 40, 0.85);
+  overflow: hidden;
+}
+
+.metricToggle button {
+  background: transparent;
+  border: none;
+  color: var(--color-text);
+  padding: 0.45rem 0.85rem;
+  font-size: 0.85rem;
+  transition: all var(--transition);
+}
+
+.metricToggle button:hover {
+  color: var(--color-accent);
+}
+
+.metricActive {
+  background: rgba(79, 156, 255, 0.18);
+  color: var(--color-accent);
+}
+
+.chartWrapper {
+  width: 100%;
+  height: 320px;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1rem;
+  margin: 0;
+}
+
+.stats div {
+  background: rgba(12, 20, 32, 0.78);
+  border-radius: var(--radius-md);
+  padding: 0.75rem 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.stats dt {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-text-soft);
+  margin: 0 0 0.35rem 0;
+}
+
+.stats dd {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 1rem;
+  }
+
+  .chartWrapper {
+    height: 260px;
+  }
+}
