@@ -1,0 +1,46 @@
+.root {
+  display: inline-flex;
+  border-radius: var(--radius-md);
+  padding: 0.4rem;
+  background: rgba(16, 24, 34, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  gap: 0.35rem;
+}
+
+.option {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  min-width: 60px;
+  gap: 0.1rem;
+  padding: 0.45rem 0.65rem;
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: var(--color-text);
+  border: 1px solid transparent;
+  transition: all var(--transition);
+  font-size: 0.8rem;
+  text-align: left;
+}
+
+.option:hover {
+  border-color: rgba(79, 156, 255, 0.5);
+}
+
+.option--active {
+  border-color: rgba(79, 156, 255, 0.8);
+  background: rgba(79, 156, 255, 0.2);
+  color: var(--color-accent);
+  box-shadow: inset 0 0 0 1px rgba(79, 156, 255, 0.3);
+}
+
+.label {
+  font-weight: 600;
+}
+
+.hint {
+  font-size: 0.7rem;
+  color: var(--color-text-soft);
+}
